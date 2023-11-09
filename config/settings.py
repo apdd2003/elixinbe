@@ -138,7 +138,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 AUTH_USER_MODEL = "authentication.User"
 
 # JWT keys
-with open(f"/usr/app/jwt{os.environ['SERVER_NAME']}RS384.key", "r") as f:
+with open(f"jwtRS256.key", "r") as f:
     os.environ["JWT_PRIVATE_KEY"] = f.read()
-with open(f"/usr/app/jwt{os.environ['SERVER_NAME']}RS384.key.pub", "r") as f:
+with open(f"jwtRS256.key.pub", "r") as f:
     os.environ["JWT_PUBLIC_KEY"] = f.read()
